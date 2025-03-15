@@ -310,18 +310,39 @@
 }
 
 /* ✅ Extra Small Devices (Phones under 480px) */
-@media (max-width: 480px) {
+@media (max-width: 480px) { 
+    /* Make images slightly larger */
     .found-items .item img {
-        width: 80px;  /* Make images even smaller on compact screens */
+        width: 80px;  /* Increase image size */
         height: 80px;
+        object-fit: cover; /* Crop instead of stretch */
     }
 
+    /* Make "Item Retrieved" button smaller */
     .retrieved-btn {
-        align-self: flex-start; /* Keep button aligned to left */
-        margin-left: 0px; /* No unnecessary spacing */
-        width: auto; /* Prevent button from becoming too wide */
+        font-size: 12px; /* Reduce font size */
+        padding: 5px 8px; /* Reduce padding */
+        width: auto; /* Prevent button from stretching */
+    }
+
+    /* Adjust filter section layout */
+    .filter-section {
+        flex-direction: column; /* Stack filters vertically */
+        align-items: center;
+    }
+
+    /* Ensure category & location text is fully visible */
+    .filter-section label {
+        white-space: nowrap; /* Prevent text from cutting off */
+    }
+
+    /* Move "Apply Filter" button below filters */
+    .filter-section button {
+        margin-top: 10px; /* Add space above button */
+        width: 100%; /* Make it full-width for better alignment */
     }
 }
+
 
 
     </style>
